@@ -1,0 +1,2 @@
+2017-04-17 11:54:02.8626|INFO|challenge.Controllers.HomeController|Index action called on home controller
+2017-04-17 11:54:02.8626|INFO|challenge.Controllers.HomeController|Index action called on home controller
