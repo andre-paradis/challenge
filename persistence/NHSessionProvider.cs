@@ -32,7 +32,7 @@ namespace persistence
                 .BuildSessionFactory();
         }
 
-        static NHSessionProvider Instance
+        public static NHSessionProvider Instance
         {
             get
             {

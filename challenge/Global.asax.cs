@@ -16,7 +16,7 @@ namespace challenge
     {
         void Application_Start(object sender, EventArgs e)
         {
-            Dependencies.registerDependencies();
+           Dependencies.registerDependencies();
 
             // Code that runs on application startup
             AreaRegistration.RegisterAllAreas();

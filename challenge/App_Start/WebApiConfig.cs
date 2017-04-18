@@ -12,7 +12,8 @@ namespace challenge
             // Web API configuration and services
 
             // Web API routes
-            config.MapHttpAttributeRoutes();
+            // now performed in Api area
+            //config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",

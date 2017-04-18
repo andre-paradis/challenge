@@ -51,11 +51,19 @@
       <HintPath>..\packages\Autofac.Mvc5.4.0.2\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Autofac.Integration.WebApi, Version=4.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.WebApi2.4.0.1\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -96,9 +104,6 @@
     <Reference Include="System.Web.Mvc">
       <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System.Net.Http.Formatting">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
@@ -121,6 +126,9 @@
     <Compile Include="App_Start\Dependencies.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Api\ApiAreaRegistration.cs" />
+    <Compile Include="Areas\Api\Controllers\SuggestionController.cs" />
+    <Compile Include="Areas\Api\Models\CitySuggestionsResponse.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -133,6 +141,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="package.json" />
     <Content Include="NLog.config" />
+    <Content Include="Areas\Api\Views\web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -142,6 +151,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Api\Views\Shared\" />
     <Folder Include="ClientApp\Assets\" />
     <Folder Include="Content\" />
     <Folder Include="Models\" />
@@ -150,6 +160,18 @@
     <ProjectReference Include="..\common\common.csproj">
       <Project>{91907300-405b-43ab-b6db-62add80ee947}</Project>
       <Name>common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\models\models.csproj">
+      <Project>{8fe488b3-d943-4029-b16c-251895d9601e}</Project>
+      <Name>models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\persistence\persistence.csproj">
+      <Project>{cec498af-c660-4587-8f49-0fde20d252e6}</Project>
+      <Name>persistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\services\services.csproj">
+      <Project>{6a136ff7-18f0-4771-bcbb-38ec2f09524c}</Project>
+      <Name>services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
