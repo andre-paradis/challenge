@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
-using challenge.Areas.Api.Models;
-using models;
+﻿using challenge.Areas.Api.Models;
 using common;
 using services;
+using System.Web.Http;
 
 namespace challenge.Areas.Api.Controllers
 {
