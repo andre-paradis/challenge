@@ -10,17 +10,17 @@ namespace models
    
     public class City
     {
-        public int Id { get; set; }
+        public virtual int Id { get; set; }
 
-        public string Name { get; set; }
+        public virtual string Name { get; set; }
 
-        public double Lat { get; set; }
+        public virtual double Lat { get; set; }
 
-        public double Long { get; set; }
+        public virtual double Long { get; set; }
 
-        public string Country { get; set; }
+        public virtual string Country { get; set; }
 
-        public string Stateprov { get; set; }
+        public virtual string Stateprov { get; set; }
 
     }
 }

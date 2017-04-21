@@ -13,6 +13,7 @@ namespace persistence
             Map(c => c.Long);
             Map(c => c.Country);
             Map(c => c.Stateprov);
+            Table("Cities");
         }
     }
 }

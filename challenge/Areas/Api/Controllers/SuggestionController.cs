@@ -22,8 +22,8 @@ namespace challenge.Areas.Api.Controllers
         }
 
         [HttpGet]
-        [Route("suggestions/{q}/{lat:double?}/{long:double?}")]
-        public CitySuggestionsResponse SuggestCities(string q, double? lat, double? @long)
+        [Route("suggestions")]
+        public CitySuggestionsResponse SuggestCities([FromUri] string q, [FromUri] double? lat = null, [FromUri] double? @long = null)
         {
             var cities = _suggestionService.SuggestCities(q, lat, @long);
 

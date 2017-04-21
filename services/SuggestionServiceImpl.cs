@@ -2,6 +2,9 @@
 using models;
 using persistence;
 using System.Collections.Generic;
+using System.Linq;
+using System;
+using System.Device.Location;
 
 namespace services
 {
@@ -21,28 +24,31 @@ namespace services
             _cityRepository = cityRepository;
         }
 
-        public IList<CitySuggestion> SuggestCities(string name, double? latitude, double? longitude)
+        public IList<CitySuggestion> SuggestCities(string query, double? latitude, double? longitude)
         {
-            _logger.Info($"SuggestCities invoked with {name}, {latitude}, {longitude}");
+            _logger.Info($"SuggestCities invoked with {query}");
 
-            return new List<CitySuggestion>() {
-                new CitySuggestion()
-                {
-                    Name = "test",
-                    Score = 1,
-                    Latitude = 12.0,
-                    Longitude = 13.0
-                },
-                new CitySuggestion()
-                {
-                    Name = "test2",
-                    Score = 1,
-                    Latitude = 12.0,
-                    Longitude = 13.0
-                }
-            };
+            GeoCoordinate source = (latitude.HasValue && longitude.HasValue) ? new GeoCoordinate(latitude.Value, longitude.Value) : null;
 
+            var suggestions = _cityRepository.GetMatchingCities(query).Select(c => new CitySuggestion()
+            {
+                Name = c.Name,
+                Score = 0,
+                Latitude = c.Lat,
+                Longitude = c.Long,
+                DistanceFromReference = (source != null) ? source.GetDistanceTo(new GeoCoordinate(c.Lat, c.Long)) : Double.MaxValue
+            });
 
+            suggestions = ApplyScore(suggestions, query);
+
+            return suggestions.ToList();
+        }
+
+        private IEnumerable<CitySuggestion> ApplyScore(IEnumerable<CitySuggestion> suggestions, string query, GeoCoordinate source = null)
+        {
+            int score = suggestions.Count();
+            suggestions = suggestions.OrderBy(s => s.Name.Length).ThenBy(s => s.DistanceFromReference).Select(s => { s.Score = score-- ; return s; }).ToList();
+            return suggestions;
         }
     }
 }

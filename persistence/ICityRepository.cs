@@ -5,6 +5,6 @@ namespace persistence
 {
     public interface ICityRepository
     {
-        IList<City> GetMatchingCities(string query, double? latitude, double? longitude);
+        IList<City> GetMatchingCities(string query);
     }
 }

@@ -1,3 +1,17 @@
 2017-04-17 21:27:09.4468|INFO|challenge.Controllers.HomeController|Index action called on home controller
 2017-04-17 21:33:40.0746|INFO|challenge.Controllers.HomeController|Index action called on home controller
 2017-04-17 22:02:11.6331|INFO|services.SuggestionServiceImpl|SuggestCities invoked with sdadsasa, 12, 12
+2017-04-20 21:16:19.9687|INFO|services.SuggestionServiceImpl|SuggestCities invoked with sdadsasa, 12, 12
+2017-04-20 21:16:41.3432|INFO|services.SuggestionServiceImpl|SuggestCities invoked with sdadsasa, 12, 12
+2017-04-20 21:18:43.1748|INFO|services.SuggestionServiceImpl|SuggestCities invoked with sdadsasa, 12, 12
+2017-04-20 21:24:20.3573|INFO|services.SuggestionServiceImpl|SuggestCities invoked with sdadsasa, 12, 12
+2017-04-20 21:25:41.1474|INFO|services.SuggestionServiceImpl|SuggestCities invoked with sdadsasa, 12, 12
+2017-04-20 21:30:10.5031|INFO|services.SuggestionServiceImpl|SuggestCities invoked with sdadsasa, 12, 12
+2017-04-20 21:30:38.8074|INFO|services.SuggestionServiceImpl|SuggestCities invoked with q, 12, 12
+2017-04-20 22:19:03.3947|INFO|services.SuggestionServiceImpl|SuggestCities invoked with sdadsasa
+2017-04-20 22:19:11.2730|INFO|services.SuggestionServiceImpl|SuggestCities invoked with q
+2017-04-20 22:25:25.5049|INFO|services.SuggestionServiceImpl|SuggestCities invoked with sdadsasa
+2017-04-20 22:25:38.1099|INFO|services.SuggestionServiceImpl|SuggestCities invoked with q
+2017-04-20 22:31:39.2939|INFO|services.SuggestionServiceImpl|SuggestCities invoked with as
+2017-04-20 22:33:26.5409|INFO|services.SuggestionServiceImpl|SuggestCities invoked with as
+2017-04-20 22:33:41.0875|INFO|services.SuggestionServiceImpl|SuggestCities invoked with as

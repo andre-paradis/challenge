@@ -9,5 +9,9 @@ namespace models
         public int Score { get; set; }
         public double Latitude { get; set; }
         public double Longitude { get; set; }
+
+        [JsonIgnore]
+        public double DistanceFromReference { get; set; }
+
     }
 }

@@ -6,11 +6,12 @@ namespace persistence
 {
     class NHCityRepository : ICityRepository
     {
-        public IList<City> GetMatchingCities(string query, double? latitude, double? longitude)
+        public IList<City> GetMatchingCities(string query)
         {
+            var q = $"%{query}%";
             using(var session = NHSessionProvider.Instance.OpenSession())
             {
-                return session.QueryOver<City>().Where(c => c.Name.Like($"%{query}%")).List();
+                return session.QueryOver<City>().WhereRestrictionOn(c => c.Name).IsLike(q).List();
             }
         }
     }
