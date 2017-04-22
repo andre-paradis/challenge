@@ -1,5 +1,6 @@
 ﻿import angular from 'angular';
 
+import AppCtrl from './Controllers/AppController';
 
 let app = () => {
     return {
@@ -9,11 +10,6 @@ let app = () => {
     }
 };
 
-class AppCtrl {
-    constructor() {
-        this.url = 'https://github.com/preboot/angular-webpack';
-    }
-}
 
 const MODULE_NAME = 'app';
 

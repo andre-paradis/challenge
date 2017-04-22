@@ -15,3 +15,6 @@
 2017-04-20 22:31:39.2939|INFO|services.SuggestionServiceImpl|SuggestCities invoked with as
 2017-04-20 22:33:26.5409|INFO|services.SuggestionServiceImpl|SuggestCities invoked with as
 2017-04-20 22:33:41.0875|INFO|services.SuggestionServiceImpl|SuggestCities invoked with as
+2017-04-21 22:30:25.0951|INFO|services.SuggestionServiceImpl|SuggestCities invoked with as
+2017-04-21 22:45:49.0244|INFO|services.SuggestionServiceImpl|SuggestCities invoked with as
+2017-04-21 22:46:17.0015|INFO|services.SuggestionServiceImpl|SuggestCities invoked with as

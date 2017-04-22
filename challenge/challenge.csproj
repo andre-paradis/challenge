@@ -117,6 +117,7 @@
   <ItemGroup>
     <Content Include="ClientApp\app.html" />
     <Content Include="ClientApp\App.js" />
+    <Content Include="ClientApp\Controllers\AppController.js" />
     <Content Include="Global.asax" />
     <Content Include="ClientApp\index.html" />
     <Content Include="Web.config" />
