@@ -82,26 +82,8 @@ module.exports = function makeWebpackConfig() {
             },
             exclude: /node_modules/
         }, {
-            // CSS LOADER
-            // Reference: https://github.com/webpack/css-loader
-            // Allow loading css through js
-            //
-            // Reference: https://github.com/postcss/postcss-loader
-            // Postprocess your css with PostCSS plugins
             test: /\.css$/,
-            // Reference: https://github.com/webpack/extract-text-webpack-plugin
-            // Extract css files in production builds
-            //
-            // Reference: https://github.com/webpack/style-loader
-            // Use style-loader in development.
-
-            loader: ExtractTextPlugin.extract({
-                fallbackLoader: 'style-loader',
-                loader: [
-                  { loader: 'css-loader', query: { sourceMap: true } },
-                  { loader: 'postcss-loader' }
-                ],
-            })
+            loader: [ 'style-loader', 'css-loader' ]
         },
         {
             // ASSET LOADER
