@@ -4,6 +4,9 @@ using NHibernate;
 
 namespace persistence
 {
+    /// <summary>
+    /// Singleton that construct instances of NH sessions
+    /// </summary>
     class NHSessionProvider
     {
         private static NHSessionProvider _instance;
@@ -27,6 +30,12 @@ namespace persistence
                 .BuildSessionFactory();
         }
 
+        /// <summary>
+        /// Gets the instance of the session provider
+        /// </summary>
+        /// <value>
+        /// The instance.
+        /// </value>
         public static NHSessionProvider Instance
         {
             get
@@ -35,6 +44,10 @@ namespace persistence
             }
         }
 
+        /// <summary>
+        /// Opens the session.
+        /// </summary>
+        /// <returns></returns>
         public ISession OpenSession()
         {
             return _sessionFactory.OpenSession();

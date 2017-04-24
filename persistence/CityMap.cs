@@ -3,6 +3,10 @@ using models;
 
 namespace persistence
 {
+    /// <summary>
+    /// Mapping of the cities table
+    /// </summary>
+    /// <seealso cref="FluentNHibernate.Mapping.ClassMap{models.City}" />
     class CityMap :  ClassMap<City>
     {
         public CityMap()

@@ -124,3 +124,26 @@
 2017-04-23 18:10:54.7854|INFO|services.SuggestionServiceImpl|SuggestCities invoked with Torri
 2017-04-23 18:10:54.9248|INFO|services.SuggestionServiceImpl|SuggestCities invoked with Torr
 2017-04-23 18:10:55.0518|INFO|services.SuggestionServiceImpl|SuggestCities invoked with Tor
+2017-04-23 21:48:28.5705|INFO|services.SuggestionServiceImpl|SuggestCities invoked with tor
+2017-04-23 21:48:36.3209|INFO|services.SuggestionServiceImpl|SuggestCities invoked with Fostori
+2017-04-23 21:48:36.8788|INFO|services.SuggestionServiceImpl|SuggestCities invoked with Fostor
+2017-04-23 21:48:37.1132|INFO|services.SuggestionServiceImpl|SuggestCities invoked with Fosto
+2017-04-23 21:48:37.3088|INFO|services.SuggestionServiceImpl|SuggestCities invoked with Fost
+2017-04-23 21:48:37.4912|INFO|services.SuggestionServiceImpl|SuggestCities invoked with Fos
+2017-04-23 21:48:40.9808|INFO|services.SuggestionServiceImpl|SuggestCities invoked with tor
+2017-04-23 21:48:46.7659|INFO|services.SuggestionServiceImpl|SuggestCities invoked with Storm Lak
+2017-04-23 21:48:46.9132|INFO|services.SuggestionServiceImpl|SuggestCities invoked with Storm La
+2017-04-23 21:48:47.0262|INFO|services.SuggestionServiceImpl|SuggestCities invoked with Storm L
+2017-04-23 21:48:47.1544|INFO|services.SuggestionServiceImpl|SuggestCities invoked with Storm
+2017-04-23 21:48:47.4493|INFO|services.SuggestionServiceImpl|SuggestCities invoked with Stor
+2017-04-23 21:48:47.5704|INFO|services.SuggestionServiceImpl|SuggestCities invoked with Sto
+2017-04-23 21:48:51.7134|INFO|services.SuggestionServiceImpl|SuggestCities invoked with amq
+2017-04-23 21:53:37.5446|INFO|services.SuggestionServiceImpl|SuggestCities invoked with tor
+2017-04-23 21:54:33.3261|INFO|services.SuggestionServiceImpl|SuggestCities invoked with tor
+2017-04-23 21:54:33.9317|INFO|services.SuggestionServiceImpl|SuggestCities invoked with toro
+2017-04-23 21:54:33.9969|INFO|services.SuggestionServiceImpl|SuggestCities invoked with toron
+2017-04-23 21:54:39.9549|INFO|services.SuggestionServiceImpl|SuggestCities invoked with Toront
+2017-04-23 21:54:40.8999|INFO|services.SuggestionServiceImpl|SuggestCities invoked with Toron
+2017-04-23 21:54:41.1711|INFO|services.SuggestionServiceImpl|SuggestCities invoked with Toro
+2017-04-23 21:54:41.3361|INFO|services.SuggestionServiceImpl|SuggestCities invoked with Tor
+2017-04-23 21:54:44.1138|INFO|services.SuggestionServiceImpl|SuggestCities invoked with far

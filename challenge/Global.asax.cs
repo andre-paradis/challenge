@@ -16,12 +16,13 @@ namespace challenge
     {
         void Application_Start(object sender, EventArgs e)
         {
-           Dependencies.registerDependencies();
+            // fill in autofac IoC container
+            Dependencies.registerDependencies();
 
             // Code that runs on application startup
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-                   }
+        }
     }
 }

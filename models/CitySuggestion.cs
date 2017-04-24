@@ -2,6 +2,9 @@
 
 namespace models
 {
+    /// <summary>
+    /// Model that represents a suggestion returned from the suggestion service
+    /// </summary>
     [JsonObject(NamingStrategyType = typeof(Newtonsoft.Json.Serialization.CamelCaseNamingStrategy))]
     public class CitySuggestion
     {

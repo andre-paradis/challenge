@@ -2,16 +2,12 @@
     <div class="container">
 
         <h1 class="title">Challenge Search Cities</h1>
-
+        <h4>Suggestions are shown in a dropdown while you type.  Select one to see details</h4>
 
         <div class="row">
             <div class="col-md-12">
-                <div class="input-group">
                     <input type="text" ng-model="app.city" class="form-control" placeholder="Search for..." typeahead-min-length="3" typeahead-template-url="customTemplate.html" uib-typeahead="city as city.name for city in app.searchCities($viewValue)" />
-                    <span class="input-group-btn">
-                        <button ng-click="app.showCity($event)" class="btn btn-primary" type="button">Go!</button>
-                    </span>
-                </div>
+               
             </div>
         </div>
 

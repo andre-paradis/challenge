@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 namespace models
 {
 
-   
+    /// <summary>
+    /// City model mapped to the cities database table
+    /// </summary>
     public class City
     {
         public virtual int Id { get; set; }

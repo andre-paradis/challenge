@@ -6,6 +6,9 @@ class AppCtrl {
         this.$http = $http;
     }
 
+    /*
+     * fetch relevant cities from the api.  Returns a promise used by the bootstrap typeahead component
+     */
     searchCities(query) {
         return this.$http({
             method: 'GET',
