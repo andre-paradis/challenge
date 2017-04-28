@@ -6,7 +6,7 @@
 
         <div class="row">
             <div class="col-md-12">
-                    <input type="text" ng-model="app.city" class="form-control" placeholder="Search for..." typeahead-min-length="3" typeahead-template-url="customTemplate.html" uib-typeahead="city as city.name for city in app.searchCities($viewValue)" />
+                    <input type="text" ng-model="app.city" class="form-control" placeholder="Search for..." typeahead-wait-ms="500" typeahead-no-results="app.noCities" typeahead-min-length="3" typeahead-template-url="customTemplate.html" uib-typeahead="city as city.name for city in app.searchCities($viewValue)" />
                
             </div>
         </div>
@@ -19,6 +19,16 @@
                     <div class="col-md-3">Score: {{app.city.score}}</div>
                     <div class="col-md-3">Lat: {{app.city.latitude}}</div>
                     <div class="col-md-3">Long: {{app.city.longitude}}</div>
+                </div>
+            </div>
+        </div>
+
+        <div ng-show="app.noCities"class="panel panel-primary" style="margin-top: 50px">
+            <div class="panel-heading">No cities</div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-12">I'm so sorry...  could not find what you're looking for</div>
+                  
                 </div>
             </div>
         </div>

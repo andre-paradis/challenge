@@ -39,13 +39,18 @@ namespace challenge.Areas.Api.Controllers
         {
             // delegate operation to suggestion service..
             var cities = _suggestionService.SuggestCities(q, lat, @long);
-
-            // wrap response that will be serialized to json or xml dependending on request content-type.
-            return new CitySuggestionsResponse()
+            if(cities.Count == 0)
             {
-                Suggestions = cities
-            };
-
+                throw new HttpResponseException(System.Net.HttpStatusCode.NotFound);
+            }
+            else
+            {
+                // wrap response that will be serialized to json or xml dependending on request content-type.
+                return new CitySuggestionsResponse()
+                {
+                    Suggestions = cities
+                };
+            }
         }
     }
 }
