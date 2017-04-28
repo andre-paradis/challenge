@@ -1,9 +1,17 @@
-﻿import typeahead from 'angular-ui-bootstrap/src/typeahead/index-nocss.js';
+﻿import typeahead from 'angular-ui-bootstrap/src/typeahead';
 
 
 class AppCtrl {
-    constructor($http) {
+    constructor($http, $scope) {
         this.$http = $http;
+        this.$scope = $scope;
+        this.$scope.city = '';
+
+    
+    }
+
+    resetCities() {
+        this.cities = [];
     }
 
     /*
@@ -16,12 +24,13 @@ class AppCtrl {
             method: 'GET',
             url: `/suggestions/?q=${query}&lat=12&long=12`
         }).then(function successCallback(response) {
+            me.cities = response.data.suggestions;
             return response.data.suggestions;
         }, function errorCallback(response) {
             if(response.status == 404) {
                 // no cities found
-                this.noCities = true;
-                return [];
+                me.noCities = true;
+                me.cities = [];
             }
         });
     }

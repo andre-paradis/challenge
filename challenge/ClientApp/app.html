@@ -6,12 +6,12 @@
 
         <div class="row">
             <div class="col-md-12">
-                    <input type="text" ng-model="app.city" class="form-control" placeholder="Search for..." typeahead-wait-ms="500" typeahead-no-results="app.noCities" typeahead-min-length="3" typeahead-template-url="customTemplate.html" uib-typeahead="city as city.name for city in app.searchCities($viewValue)" />
+                    <input type="text" ng-keypress="app.resetCities()" ng-model="app.city" class="form-control" placeholder="Search for..." typeahead-wait-ms="500" typeahead-no-results="app.noCities" typeahead-min-length="3" typeahead-template-url="customTemplate.html" uib-typeahead="city as city.name for city in app.searchCities($viewValue)" />
                
             </div>
         </div>
 
-        <div ng-show="app.city.name" class="panel panel-primary" style="margin-top: 50px">
+        <div ng-show="app.city.name"  class="panel panel-primary" style="margin-top: 50px">
             <div class="panel-heading">Selected City</div>
             <div class="panel-body">
                 <div class="row">
@@ -22,6 +22,19 @@
                 </div>
             </div>
         </div>
+
+        <div  class="panel panel-primary" style="margin-top: 50px">
+            <div class="panel-heading">Cities</div>
+            <div class="panel-body">
+                <div class="row" ng-repeat="city in app.cities">
+                    <div class="col-md-3">Name: {{city.name}}</div>
+                    <div class="col-md-3">Score: {{city.score}}</div>
+                    <div class="col-md-3">Lat: {{city.latitude}}</div>
+                    <div class="col-md-3">Long: {{city.longitude}}</div>
+                </div>
+            </div>
+        </div>
+
 
         <div ng-show="app.noCities"class="panel panel-primary" style="margin-top: 50px">
             <div class="panel-heading">No cities</div>
