@@ -147,3 +147,7 @@
 2017-04-23 21:54:41.1711|INFO|services.SuggestionServiceImpl|SuggestCities invoked with Toro
 2017-04-23 21:54:41.3361|INFO|services.SuggestionServiceImpl|SuggestCities invoked with Tor
 2017-04-23 21:54:44.1138|INFO|services.SuggestionServiceImpl|SuggestCities invoked with far
+2017-04-28 13:28:43.9917|INFO|services.SuggestionServiceImpl|SuggestCities invoked with toron
+2017-04-28 13:28:43.9917|INFO|services.SuggestionServiceImpl|SuggestCities invoked with tor
+2017-04-28 13:28:43.9917|INFO|services.SuggestionServiceImpl|SuggestCities invoked with toro
+2017-04-28 13:28:51.5271|INFO|services.SuggestionServiceImpl|SuggestCities invoked with tor

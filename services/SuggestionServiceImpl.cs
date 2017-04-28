@@ -67,8 +67,9 @@ namespace services
         /// <returns></returns>
         private IEnumerable<CitySuggestion> ApplyScore(IEnumerable<CitySuggestion> suggestions, string query, GeoCoordinate source = null)
         {
-            int score = suggestions.Count();
-            suggestions = suggestions.OrderBy(s => s.Name.Length).ThenBy(s => s.DistanceFromReference).Select(s => { s.Score = score-- ; return s; }).ToList();
+            int score = suggestions.Count() - 1;
+            double maxScore = suggestions.Count() - 1;
+            suggestions = suggestions.OrderBy(s => s.Name.Length).ThenBy(s => s.DistanceFromReference).Select(s => { s.Score = score-- / maxScore; return s; }).ToList();
             return suggestions;
         }
     }
